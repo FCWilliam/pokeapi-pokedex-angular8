@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Archivo+Narrow&display=swap');
+
+.title{
+    font-family: 'Archivo Narrow', sans-serif;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 1px solid #000000;
+}
+
+.poketable{
+    border: 1px solid #000000;
+    width: 80%;
+    border-spacing: 0px;;
+}
+
+.row-image{
+    border: 0.5px solid #000000;
+    width: 10%;
+    border-spacing: 0px;
+}
+
+.row-name{
+    border: 0.5px solid #000000;
+    width: 90%;
+    border-spacing: 0px;
+    font-family: 'Archivo Narrow', sans-serif;
+    font-size: 22px;
+}

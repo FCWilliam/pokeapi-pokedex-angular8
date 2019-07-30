@@ -10,23 +10,30 @@ import { forkJoin } from 'rxjs';
 })
 export class AppComponent implements OnInit {
 
-public pokeresults = {};
+  public pokeresults = [];
   constructor(private pokeapiService: PokeapiService) { }
 
   ngOnInit() {
+    const pokemonObsArr = [];
 
-const pokedetails = [];
-// let poke = [];
-
-for (let i = 1; i < 152; i++) {
-  const poke = this.pokeapiService.getPokemon('' + i);
-  pokedetails.push(poke);
-  console.log(i);
-  console.log(pokedetails);
-}
+    for (let i = 1; i < 152; i++) {
+      const pokeObs = this.pokeapiService.getPokemon(+i);
+      pokemonObsArr.push(pokeObs);
+      console.log(i);
 
 
-// const name = this.PokeapiService.getPokemon()
+    }
+
+    console.log(pokemonObsArr);
+    forkJoin(pokemonObsArr).subscribe((res) => {
+      console.log(res);
+      this.pokeresults = res;
+    }, (err) => { console.log(err);
+    });
+
+
+
+    // const name = this.PokeapiService.getPokemon()
     // this.PokeapiService.getAllPokemon('20')//.subscribe(
     //   (res)=>{
     //     this.pokeresults = res;
