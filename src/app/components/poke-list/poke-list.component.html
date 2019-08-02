@@ -6,6 +6,9 @@
   <thead>
     <th class="title" scope="col">Image</th>
     <th class="title" scope="col">Name</th>
+    <th class="title" scope="col">Attack</th>
+    <th class="title" scope="col">Defence</th>
+    <th class="title" scope="col">HP</th>
   </thead>
   <tbody>
     <ng-container *ngFor="let pokemon of pokeRender">
@@ -17,7 +20,6 @@
             <li><b>Attack:</b> {{pokemon.stats[4].base_stat}}</li>
             <li><b>Defence:</b> {{pokemon.stats[3].base_stat}}</li>
           </ul>
-        </td>
     </ng-container>
   </tbody>
 </table>
