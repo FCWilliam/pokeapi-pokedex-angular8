@@ -1,4 +1,4 @@
-import { Component, OnInit, ɵConsole } from '@angular/core';
+import { Component, OnInit, } from '@angular/core';
 import { PokeapiService } from './services/pokeapi.service';
 import { forkJoin } from 'rxjs';
 
