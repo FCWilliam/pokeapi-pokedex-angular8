@@ -17,6 +17,11 @@ export class AppComponent implements OnInit {
     const pokemonObsArr = [];
 
     for (let i = 1; i < 152; i++) {
+      // If statement inside for loop due to an error with the API. ID 71 was temporarily unavailable.
+      //   // if (i === 71) {
+      //   //   i++;
+      // }
+
       const pokeObs = this.pokeapiService.getPokemon(+i);
       pokemonObsArr.push(pokeObs);
       console.log(i);
@@ -28,7 +33,8 @@ export class AppComponent implements OnInit {
     forkJoin(pokemonObsArr).subscribe((res) => {
       console.log(res);
       this.pokeresults = res;
-    }, (err) => { console.log(err);
+    }, (err) => {
+      console.log(err);
     });
 
 
