@@ -23,7 +23,6 @@ export class PokeListComponent implements OnInit {
       //   // if (i === 71) {
       //   //   i++;
       // }
-
       const pokeObs = this.pokeapiService.getPokemon(+i);
       pokemonObsArr.push(pokeObs);
       console.log(i);
@@ -44,7 +43,7 @@ export class PokeListComponent implements OnInit {
 
   onSearch(event: any) {
     const results = this.pokeresults.filter((pokemon) => {
-      if (pokemon.name.includes(event.target.value)) {
+      if (pokemon.name.includes(event.target.value.toLowerCase())) {
         return true;
       }
       return false;

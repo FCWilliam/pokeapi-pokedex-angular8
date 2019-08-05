@@ -6,7 +6,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PokeListComponent } from './components/poke-list/poke-list.component';
 import { HeaderComponent } from './components/header/header.component';
-
 @NgModule({
   declarations: [
     AppComponent,

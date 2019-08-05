@@ -2,24 +2,12 @@
   <input class="search-box" (keyup)="onSearch($event)" placeholder="Search" align="middle"> 
 </div>
 <div style="text-align:center"></div>
-<table class="poketable" align="center">
-  <thead>
-    <th class="title" scope="col">Image</th>
-    <th class="title" scope="col">Name</th>
-    <th class="title" scope="col">Attack</th>
-    <th class="title" scope="col">Defence</th>
-    <th class="title" scope="col">HP</th>
-  </thead>
-  <tbody>
-    <ng-container *ngFor="let pokemon of pokeRender">
-      <tr>
-        <td class="row-image"><img src="{{pokemon.sprites.front_default}}" alt="Pokemon Image"></td>
-        <td class="row-name">
-          <ul style="list-style-type:none">
-            <li><b>Name:</b> {{pokemon.name | titlecase}}</li>
-            <li><b>Attack:</b> {{pokemon.stats[4].base_stat}}</li>
-            <li><b>Defence:</b> {{pokemon.stats[3].base_stat}}</li>
-          </ul>
-    </ng-container>
-  </tbody>
-</table>
+
+      <div class="grid grid-pad">
+        <a *ngFor="let pokemon of pokeRender" class="col-1-4">
+          <div class="module hero">
+              <img src="{{pokemon.sprites.front_default}}" alt="Pokemon Image" class="row-image">
+            <h4>{{pokemon.name  | titlecase}}</h4>
+          </div>
+        </a>
+      </div>

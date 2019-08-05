@@ -1,51 +1,133 @@
 .title {
-    padding-top: 15px;
-    padding-bottom: 15px;
-    border: 0.5px solid #000000;
-    background-color: #ffffff;
-    font-size: 15px;
-    font-weight: 700;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: 0.5px solid #000000;
+  background-color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.poketable {
+  width: 60%;
+  border-spacing: 0px;
+  border-radius: 12px;
+  padding: 10px;
+  margin-top: 40px;
+}
+
+.row-image {
+  width: 50%;
+  border-spacing: 0px;
+  text-align: center;
+}
+
+.row-name {
+  border: 0.5px solid #000000;
+  width: 90%;
+  border-spacing: 0px;
+  font-size: 14px;
+  text-align: left;
+  background-color: #dadada;
+}
+
+.form {
+  padding-top: 50px;
+  margin: 25px auto;
+  width: 500px;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.form .search-box {
+  border: 0px solid #000000;
+  font-size: 18px;
+  display: inline-block;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  border-radius: 25px;
+  outline-width: 0;
+}
+
+[class*='col-'] {
+  float: left;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+[class*='col-']:last-of-type {
+  padding-right: 0;
+}
+a {
+  text-decoration: none;
+}
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+h2{
+  font-family: Arial, Helvetica, sans-serif;
+  text-align-last: center;
+}
+
+h3 {
+  text-align: center;
+  margin-bottom: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+h4 {
+  position: relative;
+  margin: 0px;
+  font-size: 18px;
+}
+.grid {
+  margin: 0;
+}
+.col-1-4 {
+  width: 25%;
+  min-width: 120px;
+}
+.module {
+  padding: 20px;
+  text-align: center;
+  color: #ffffff;
+  max-height: 225px;
+  min-width: 120px;
+  max-width: 322.75px;
+  background-color: #B41333;
+  border-radius: 2px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-bottom: 75px;
+}
+
+.h2{
+  font-family: Arial, Helvetica, sans-serif;
+}
+.module:hover {
+  background-color: #920F29;
+  cursor: pointer;
+  color: #ffffff;
+  min-width: 120px;
+}
+.grid-pad {
+  padding: 10px 0;
+  padding-left: 20px;
+  min-width: 120px;
+}
+@media (max-width: 600px) {
+  .module {
+    font-size: 10px;
+    max-height: 75px; }
+}
+@media (max-width: 1024px) {
+  .grid {
+    margin: 0;
   }
-  
-  .poketable {
-    width: 60%;
-    border-spacing: 0px;
-    border-radius: 12px;
-    padding: 10px;
-    margin-top: 40px;
+  .module {
+    min-width: 60px;
   }
-  
-  .row-image {
-    border: 0.5px solid #000000;
-    width: 15%;
-    border-spacing: 0px;
-    background-color: #ffffff;
-    text-align: center;
-  }
-  
-  .row-name {
-    border: 0.5px solid #000000;
-    width: 90%;
-    border-spacing: 0px;
-    font-size: 14px;
-    text-align: left;
-    background-color: #dadada;
-  }
-  
-  .form {
-    margin: 25px auto;
-    width: 500px;
-    text-align: center;
-  }
-  
-  .form .search-box {
-    border: 1px solid #000000;
-    font-size: 18px;
-    display: inline-block;
-    text-align: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    width: 100%;
-    border-radius: 25px;
-    outline-width: 0;
-  }
+}
+
+
