@@ -50,24 +50,31 @@
   outline-width: 0;
 }
 
-[class*='col-'] {
+.form .button {
+  margin-top: 15px;
+  font-size: 18px;
+}
+
+[class*="col-"] {
   float: left;
   padding-right: 20px;
   padding-bottom: 20px;
 }
-[class*='col-']:last-of-type {
+[class*="col-"]:last-of-type {
   padding-right: 0;
 }
 a {
   text-decoration: none;
 }
-*, *:after, *:before {
+*,
+*:after,
+*:before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-h2{
+h2 {
   font-family: Arial, Helvetica, sans-serif;
   text-align-last: center;
 }
@@ -96,30 +103,31 @@ h4 {
   max-height: 225px;
   min-width: 120px;
   max-width: 322.75px;
-  background-color: #B41333;
+  background-color: #b41333;
   border-radius: 2px;
   font-family: Arial, Helvetica, sans-serif;
   padding-bottom: 75px;
 }
 
-.h2{
+.h2 {
   font-family: Arial, Helvetica, sans-serif;
 }
 .module:hover {
-  background-color: #920F29;
+  background-color: #920f29;
   cursor: pointer;
   color: #ffffff;
   min-width: 120px;
 }
 .grid-pad {
   padding: 10px 0;
-  padding-left: 20px;
+  padding-left: 25px;
   min-width: 120px;
 }
 @media (max-width: 600px) {
   .module {
     font-size: 10px;
-    max-height: 75px; }
+    max-height: 75px;
+  }
 }
 @media (max-width: 1024px) {
   .grid {
@@ -129,5 +137,3 @@ h4 {
     min-width: 60px;
   }
 }
-
-

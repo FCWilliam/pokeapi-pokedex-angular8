@@ -18,7 +18,7 @@ export class PokeListComponent implements OnInit {
 
     const pokemonObsArr = [];
 
-    for (let i = 1; i < 151; i++) {
+    for (let i = 1; i < 152; i++) {
       // If statement inside for loop due to an error with the API. ID 71 was temporarily unavailable.
       //   // if (i === 71) {
       //   //   i++;
@@ -51,6 +51,5 @@ export class PokeListComponent implements OnInit {
 
     this.pokeRender = [].concat(results);
   }
-
 }
 

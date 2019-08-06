@@ -13,7 +13,7 @@ export class PokeapiService {
   private APIURL: string = 'http://pokeapi.co/api/v2/';
   pokemon$: Pokemon[];
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   public getPokemon(id: number): Observable<Pokemon> {
     return this.http.get(this.APIURL + 'pokemon/' + id);

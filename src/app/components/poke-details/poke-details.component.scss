@@ -1,0 +1,25 @@
+.flex-grid {
+    display: flex;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  .flex-grid .col1 {
+    flex: 1;
+    width: 20%;
+    color: #ffffff;
+  }
+
+  .flex-grid .col2 {
+    flex: 1;
+    width: 40%;
+    color: #ffffff;
+  }
+
+  .col {
+    background: salmon;
+    padding: 20px;
+  }
+
+  .image{
+      width: 200px;
+  }

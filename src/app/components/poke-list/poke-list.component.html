@@ -1,13 +1,13 @@
 <div class="form">
-  <input class="search-box" (keyup)="onSearch($event)" placeholder="Search" align="middle"> 
+  <input class="search-box" (keyup)="onSearch($event)" placeholder="Search" align="middle">
 </div>
 <div style="text-align:center"></div>
 
-      <div class="grid grid-pad">
-        <a *ngFor="let pokemon of pokeRender" class="col-1-4">
-          <div class="module hero">
-              <img src="{{pokemon.sprites.front_default}}" alt="Pokemon Image" class="row-image">
-            <h4>{{pokemon.name  | titlecase}}</h4>
-          </div>
-        </a>
-      </div>
+<div class="grid grid-pad">
+  <a *ngFor="let pokemon of pokeRender" class="col-1-4" routerLink="/details/{{pokemon.id}}">
+    <div class="module hero">
+      <img src="{{pokemon.sprites.front_default}}" alt="Pokemon Image" class="row-image">
+      <h4>{{pokemon.name  | titlecase}}</h4>
+    </div>
+  </a>
+</div>

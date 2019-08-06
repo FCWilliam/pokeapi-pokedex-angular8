@@ -14,40 +14,5 @@ export class AppComponent implements OnInit {
   constructor(private pokeapiService: PokeapiService) { }
 
   ngOnInit() {
-    const pokemonObsArr = [];
-
-    for (let i = 1; i < 152; i++) {
-      // If statement inside for loop due to an error with the API. ID 71 was temporarily unavailable.
-      //   // if (i === 71) {
-      //   //   i++;
-      // }
-
-      const pokeObs = this.pokeapiService.getPokemon(+i);
-      pokemonObsArr.push(pokeObs);
-      console.log(i);
-
-
-    }
-
-    console.log(pokemonObsArr);
-    forkJoin(pokemonObsArr).subscribe((res) => {
-      console.log(res);
-      this.pokeresults = res;
-    }, (err) => {
-      console.log(err);
-    });
-
-
-
-    // const name = this.PokeapiService.getPokemon()
-    // this.PokeapiService.getAllPokemon('20')//.subscribe(
-    //   (res)=>{
-    //     this.pokeresults = res;
-    //   },
-    //   (err) =>{
-    //     console.log(err);
-    //   }
-    // );
   }
-
 }
