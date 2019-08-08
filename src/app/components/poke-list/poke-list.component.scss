@@ -31,11 +31,12 @@
 }
 
 .form {
-  padding-top: 50px;
+  padding-top: 10px;
   margin: 25px auto;
   width: 500px;
   text-align: center;
-  padding-bottom: 50px;
+  padding-bottom: 10px;
+  outline-width: 0;
 }
 
 .form .search-box {
@@ -136,4 +137,165 @@ h4 {
   .module {
     min-width: 60px;
   }
+}
+
+.type{
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 40px;
+}
+
+.type .button{
+  color: #ffffff;
+  font-size: 20px !important;
+}
+
+.type .bug {
+  background-color: #a8b820;
+  border-width: 0px;
+  color: #ffffff;
+  padding: 5px 12px 5px 12px;
+  font-size: 14px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.type .dragon {
+  background-color: #7038f8;
+  border-width: 0px;
+  color: #ffffff;
+  padding: 5px 12px 5px 12px;
+  font-size: 14px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.type .ice {
+  background-color: #69b4b4;
+  border-width: 0px;
+  color: #ffffff;
+  padding: 5px 12px 5px 12px;
+  font-size: 14px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.type .fighting {
+  background-color: #c03028;
+  border-width: 0px;
+  color: #ffffff;
+  padding: 5px 12px 5px 12px;
+  font-size: 14px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.type .fire {
+  background-color: #f08030;
+  border-width: 0px;
+  color: #ffffff;
+  padding: 5px 12px 5px 12px;
+  font-size: 14px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.type .flying {
+  background-color: #a890f0;
+  border-width: 0px;
+  color: #ffffff;
+  padding: 5px 12px 5px 12px;
+  font-size: 14px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.type .grass {
+  background-color: #78c850;
+  border-width: 0px;
+  color: #ffffff;
+  padding: 5px 12px 5px 12px;
+  font-size: 14px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.type .ghost {
+  background-color: #705898;
+  border-width: 0px;
+  color: #ffffff;
+  padding: 5px 12px 5px 12px;
+  font-size: 14px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.type .ground {
+  background-color: #dfb26a;
+  border-width: 0px;
+  color: #ffffff;
+  padding: 5px 12px 5px 12px;
+  font-size: 14px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.type .electric {
+  background-color: #f8d030;
+  border-width: 0px;
+  color: #ffffff;
+  padding: 5px 12px 5px 12px;
+  font-size: 14px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.type .normal {
+  background-color: #a8a878;
+  border-width: 0px;
+  color: #ffffff;
+  padding: 5px 12px 5px 12px;
+  font-size: 14px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.type .poison {
+  background-color: #a040a0;
+  border-width: 0px;
+  color: #ffffff;
+  padding: 5px 12px 5px 12px;
+  font-size: 14px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.type .psychic {
+  background-color: #f85888;
+  border-width: 0px;
+  color: #ffffff;
+  padding: 5px 12px 5px 12px;
+  font-size: 14px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.type .rock {
+  background-color: #b8a038;
+  border-width: 0px;
+  color: #ffffff;
+  padding: 5px 12px 5px 12px;
+  font-size: 14px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.type .water {
+  background-color: #6890f0;
+  border-width: 0px;
+  color: #ffffff;
+  padding: 5px 12px 5px 12px;
+  font-size: 14px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
