@@ -41,9 +41,6 @@ export class PokeListComponent implements OnInit {
       console.log(err);
     });
 
-  }
-
-  getType() {
     const results: any = this.pokeresults.filter((pokemon) => {
       const typeResults = [];
       for (let i = 0; i < pokemon.types.length; i++) {
@@ -51,6 +48,11 @@ export class PokeListComponent implements OnInit {
       }
       console.log(typeResults);
     });
+
+
+  }
+
+  getType(event: any) {
 
   }
   onSearch(event: any) {

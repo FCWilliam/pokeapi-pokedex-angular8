@@ -1,30 +1,34 @@
-<div class="form">
-  <input class="search-box" (keyup)="onSearch($event)" placeholder="Search" align="middle">
-</div>
-<div style="text-align:center"></div>
+<div class="flex-container">
 
-<li class="filters__item filters__item--water">
-  <input type="checkbox" id="filter2" (change)="onFilterChange($event)" value="water">
-  <label for="filter2">Water</label>
-</li>
-
-<button (click)="getType()" >Change Status</button>
-
-<div class = "type">
-<a *ngFor="let pokeType of pokeType">
-  <button class="{{pokeType}}" type="button">{{pokeType | titlecase}}</button>
-</a>
-</div>
-
-<div class="grid grid-pad">
-  <a *ngFor="let pokemon of pokeRender" class="col-1-4" routerLink="/details/{{pokemon.id}}">
-    <div class="module hero">
-      <img src="{{pokemon.sprites.front_default}}" alt="Pokemon Image" class="row-image">
-      <h4>{{pokemon.name  | titlecase}}</h4>
-      <p ngFor="let pokemon of">{{pokemon.types[i].type.name}}</p>
-      <!-- <a ngFor="let pokemon.types of type; index as i">
-      {{pokemon.types[i].type.name}} -->
-      <!-- </a> -->
+  <div style="flex-grow: 1">
+    <div class="form">
+      <input class="search-box" (keyup)="onSearch($event)" placeholder="Search" align="middle">
     </div>
-  </a>
+    <!-- 
+    <div class="type">
+      <a *ngFor="let pokeType of pokeType">
+        <button class="{{pokeType}}" type="button">{{pokeType | titlecase}}</button>
+      </a>
+    </div>
+  -->
+  </div>
+
+  <div style="flex-grow: 9">
+    <div class="grid grid-pad">
+      <div class="col">
+        <a *ngFor="let pokemon of pokeRender" class="col-1-4" routerLink="/details/{{pokemon.id}}">
+          <div class="module hero">
+            <img src="{{pokemon.sprites.front_default}}" alt="Pokemon Image" class="row-image">
+            <h4>{{pokemon.name  | titlecase}}</h4>
+            <div class="type-list">
+              <a *ngFor="let type of pokemon.types">
+                <!-- {{pokemon.types[i].type.name}} -->
+                <label class="type-list__item type-list__item--{{type.type.name}}">{{type.type.name}}</label>
+              </a>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
 </div>

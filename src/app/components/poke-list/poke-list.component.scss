@@ -7,16 +7,8 @@
   font-weight: 700;
 }
 
-.poketable {
-  width: 60%;
-  border-spacing: 0px;
-  border-radius: 12px;
-  padding: 10px;
-  margin-top: 40px;
-}
-
 .row-image {
-  width: 50%;
+  width: 45%;
   border-spacing: 0px;
   text-align: center;
 }
@@ -26,14 +18,14 @@
   width: 90%;
   border-spacing: 0px;
   font-size: 14px;
-  text-align: left;
+  text-align: center;
   background-color: #dadada;
 }
 
 .form {
   padding-top: 10px;
   margin: 25px auto;
-  width: 500px;
+  width: 90%;
   text-align: center;
   padding-bottom: 10px;
   outline-width: 0;
@@ -41,14 +33,13 @@
 
 .form .search-box {
   border: 0px solid #000000;
-  font-size: 18px;
+  font-size: 15px;
   display: inline-block;
   text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
   width: 100%;
   border-radius: 25px;
   outline-width: 0;
+  padding: 5px 10px 5px 10px;
 }
 
 .form .button {
@@ -58,8 +49,6 @@
 
 [class*="col-"] {
   float: left;
-  padding-right: 20px;
-  padding-bottom: 20px;
 }
 [class*="col-"]:last-of-type {
   padding-right: 0;
@@ -89,25 +78,29 @@ h4 {
   position: relative;
   margin: 0px;
   font-size: 18px;
+  // margin-bottom: 20px;
 }
 .grid {
   margin: 0;
 }
 .col-1-4 {
-  width: 25%;
+  width: 20%;
   min-width: 120px;
+  max-width: 20%;
 }
 .module {
   padding: 20px;
   text-align: center;
   color: #ffffff;
-  max-height: 225px;
+  max-height: 175px;
   min-width: 120px;
-  max-width: 322.75px;
+  max-width: 100%;
   background-color: #b41333;
   border-radius: 2px;
   font-family: Arial, Helvetica, sans-serif;
-  padding-bottom: 75px;
+  margin: 5px 5px 5px 5px;
+  padding: 5px;
+  padding-bottom: 5px;
 }
 
 .h2 {
@@ -123,6 +116,7 @@ h4 {
   padding: 10px 0;
   padding-left: 25px;
   min-width: 120px;
+
 }
 @media (max-width: 600px) {
   .module {
@@ -139,163 +133,75 @@ h4 {
   }
 }
 
-.type{
+.type {
   text-align: center;
-  font-size: 25px;
+  font-size: 22px;
   margin-bottom: 40px;
 }
 
-.type .button{
+.label .button {
   color: #ffffff;
   font-size: 20px !important;
 }
 
-.type .bug {
-  background-color: #a8b820;
+$filterColors: (
+  "grass": #78c850,
+  "bug": #a8b820,
+  "dragon": #7038f8,
+  "ice": #69b4b4,
+  "fighting": #c03028,
+  "fire": #f08030,
+  "flying": #a890f0,
+  "ghost": #705898,
+  "ground": #dfb26a,
+  "electric": #f8d030,
+  "normal": #a8a878,
+  "poison": #a040a0,
+  "psychic": #f85888,
+  "rock": #b8a038,
+  "water": #6890f0,
+  "fairy": #ee99ac,
+  "steel": #b8b8d0
+);
+
+.type-list__item {
   border-width: 0px;
   color: #ffffff;
   padding: 5px 12px 5px 12px;
   font-size: 14px;
   margin-left: 5px;
   margin-right: 5px;
+  background-color: #b41333;
+
+  @each $key, $value in $filterColors {
+    &--#{$key} {
+      background-color: $value;
+    }
+  }
 }
 
-.type .dragon {
-  background-color: #7038f8;
-  border-width: 0px;
-  color: #ffffff;
-  padding: 5px 12px 5px 12px;
-  font-size: 14px;
-  margin-left: 5px;
-  margin-right: 5px;
+.type-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-transform: capitalize;
+  margin: 5px;
 }
 
-.type .ice {
-  background-color: #69b4b4;
-  border-width: 0px;
-  color: #ffffff;
-  padding: 5px 12px 5px 12px;
-  font-size: 14px;
-  margin-left: 5px;
-  margin-right: 5px;
+.type-list a {
+  padding: 0px 0px 0px 0px;
 }
 
-.type .fighting {
-  background-color: #c03028;
-  border-width: 0px;
-  color: #ffffff;
-  padding: 5px 12px 5px 12px;
-  font-size: 14px;
-  margin-left: 5px;
-  margin-right: 5px;
+.flex-container {
+  display: flex;
+  align-items: stretch;
+  margin: 10px;
 }
 
-.type .fire {
-  background-color: #f08030;
-  border-width: 0px;
-  color: #ffffff;
-  padding: 5px 12px 5px 12px;
-  font-size: 14px;
-  margin-left: 5px;
-  margin-right: 5px;
-}
-
-.type .flying {
-  background-color: #a890f0;
-  border-width: 0px;
-  color: #ffffff;
-  padding: 5px 12px 5px 12px;
-  font-size: 14px;
-  margin-left: 5px;
-  margin-right: 5px;
-}
-
-.type .grass {
-  background-color: #78c850;
-  border-width: 0px;
-  color: #ffffff;
-  padding: 5px 12px 5px 12px;
-  font-size: 14px;
-  margin-left: 5px;
-  margin-right: 5px;
-}
-
-.type .ghost {
-  background-color: #705898;
-  border-width: 0px;
-  color: #ffffff;
-  padding: 5px 12px 5px 12px;
-  font-size: 14px;
-  margin-left: 5px;
-  margin-right: 5px;
-}
-
-.type .ground {
-  background-color: #dfb26a;
-  border-width: 0px;
-  color: #ffffff;
-  padding: 5px 12px 5px 12px;
-  font-size: 14px;
-  margin-left: 5px;
-  margin-right: 5px;
-}
-
-.type .electric {
-  background-color: #f8d030;
-  border-width: 0px;
-  color: #ffffff;
-  padding: 5px 12px 5px 12px;
-  font-size: 14px;
-  margin-left: 5px;
-  margin-right: 5px;
-}
-
-.type .normal {
-  background-color: #a8a878;
-  border-width: 0px;
-  color: #ffffff;
-  padding: 5px 12px 5px 12px;
-  font-size: 14px;
-  margin-left: 5px;
-  margin-right: 5px;
-}
-
-.type .poison {
-  background-color: #a040a0;
-  border-width: 0px;
-  color: #ffffff;
-  padding: 5px 12px 5px 12px;
-  font-size: 14px;
-  margin-left: 5px;
-  margin-right: 5px;
-}
-
-.type .psychic {
-  background-color: #f85888;
-  border-width: 0px;
-  color: #ffffff;
-  padding: 5px 12px 5px 12px;
-  font-size: 14px;
-  margin-left: 5px;
-  margin-right: 5px;
-}
-
-.type .rock {
-  background-color: #b8a038;
-  border-width: 0px;
-  color: #ffffff;
-  padding: 5px 12px 5px 12px;
-  font-size: 14px;
-  margin-left: 5px;
-  margin-right: 5px;
-}
-
-.type .water {
-  background-color: #6890f0;
-  border-width: 0px;
-  color: #ffffff;
-  padding: 5px 12px 5px 12px;
-  font-size: 14px;
-  margin-left: 5px;
-  margin-right: 5px;
+.flex-container > div {
+  color: white;
+  width: 100px;
+  text-align: center;
+  // line-height: 75px;
+  font-size: 30px;
 }
