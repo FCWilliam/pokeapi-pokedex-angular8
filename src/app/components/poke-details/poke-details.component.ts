@@ -12,7 +12,10 @@ import { PokeListComponent } from '../poke-list/poke-list.component';
 })
 export class PokeDetailsComponent implements OnInit {
 
-  public pokedetails = {};
+  public pokedetails = null;
+  public pokeresults = [];
+  public pokeRender = [];
+
 
   constructor(
     private route: ActivatedRoute,
@@ -20,6 +23,7 @@ export class PokeDetailsComponent implements OnInit {
     private location: Location
   ) { }
   ngOnInit() {
+
     const id = +this.route.snapshot.paramMap.get('id');
     const pokedetails = this.pokeapiService.getPokemon(id).subscribe((res) => {
       console.log(res);

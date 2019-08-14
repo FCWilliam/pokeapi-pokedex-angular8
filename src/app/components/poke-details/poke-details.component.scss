@@ -1,25 +1,153 @@
+.poke-title{
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+h2 {
+  font-size: 25px;
+  margin: 0px;
+  margin-bottom: 25px;
+}
+
+p{
+  margin: 0px;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.poke-image{
+  width: 70%;
+  text-align: center;
+  margin-left: auto; 
+  margin-right: auto; 
+}
+
+
 .flex-grid {
     display: flex;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border-width: 20px;
+    border-color: #ffffff;
   }
   .flex-grid .col1 {
     flex: 1;
     width: 20%;
     color: #ffffff;
+    background-color: #B81032;
+    padding: 20px;
+    border: 4px solid #ffffffff;
   }
 
   .flex-grid .col2 {
     flex: 1;
-    width: 40%;
+    width: 30%;
     color: #ffffff;
+    background-color: #920C27;
+    padding: 20px;
+    border: 1px solid #ffffffff;
+  }
+
+  .flex-grid .col3 {
+    flex: 1;
+    width: 50%;
+    color: #ffffff;
+    background-color: #920C27;
+    padding: 20px;
   }
 
   .col {
     background: salmon;
+  }
+
+  .images{
+    flex-direction: row;
+    text-align: center;
     padding: 20px;
   }
 
-  .image{
-      width: 200px;
+  // .images{
+  //   flex-direction: row;
+  //   text-align: center;
+  //   padding: 20px;
+  // }
+
+  .type {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 40px;
+    margin-left: auto; 
+    margin-right: auto;
+  }
+  
+  .label .button {
+    color: #ffffff;
+    font-size: 20px !important;
+  }
+  
+  $filterColors: (
+    "grass": #78c850,
+    "bug": #a8b820,
+    "dragon": #7038f8,
+    "ice": #69b4b4,
+    "fighting": #c03028,
+    "fire": #f08030,
+    "flying": #a890f0,
+    "ghost": #705898,
+    "ground": #dfb26a,
+    "electric": #f8d030,
+    "normal": #a8a878,
+    "poison": #a040a0,
+    "psychic": #f85888,
+    "rock": #b8a038,
+    "water": #6890f0,
+    "fairy": #ee99ac,
+    "steel": #b8b8d0
+  );
+  
+  .type-list__item {
+    border-width: 0px;
+    color: #ffffff;
+    padding: 5px 12px 5px 12px;
+    font-size: 18px;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: #b41333;
+  
+    @each $key, $value in $filterColors {
+      &--#{$key} {
+        background-color: $value;
+      }
+    }
+  }
+  
+  .type-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-transform: capitalize;
+    margin: 5px;
+    margin-left: auto; 
+    margin-right: auto; 
+  }
+  
+  .type-list a {
+    padding: 0px 0px 0px 0px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  
+  .moves-box{
+    height:40%;
+    width:90%;
+    border:1px solid #ccc;
+    font:16px/26px 'Montserrat', sans-serif;
+    overflow:auto;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #b41333;
+    padding: 10px;
   }

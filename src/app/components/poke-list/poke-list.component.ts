@@ -1,7 +1,9 @@
+
 import { Component, OnInit } from '@angular/core';
 import { PokeapiService } from '../../services/pokeapi.service';
 import { forkJoin } from 'rxjs';
 import { filter } from 'minimatch';
+import { FormBuilder, FormGroup, FormArray, Validators, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-poke-list',
@@ -14,72 +16,59 @@ export class PokeListComponent implements OnInit {
   public pokeRender = [];
   public pokeType = ['bug', 'dragon', 'ice', 'fighting', 'fire', 'flying', 'grass',
     'ghost', 'ground', 'electric', 'normal', 'poison', 'psychic', 'rock', 'water'];
+  public typeSearch = ['water', 'grass'];
+  public typeResults = [];
 
-  constructor(private pokeapiService: PokeapiService) { }
+  public filterForm = new FormGroup({
+    nameFilter: new FormControl('')
+    // typeFilter: new FormControl(false)
+  });
+
+  constructor(private pokeapiService: PokeapiService, private fb: FormBuilder) {
+  }
+
 
   ngOnInit() {
+    this.filterForm.valueChanges.subscribe((filterItem) => {
+      console.log(filterItem);
+      this.onFilter(filterItem)
+    });
+
+    console.log(this.filterForm);
 
     const pokemonObsArr = [];
 
     for (let i = 1; i < 152; i++) {
-      // If statement inside for loop due to an error with the API. ID 71 was temporarily unavailable.
-      //   // if (i === 71) {
-      //   //   i++;
-      // }
       const pokeObs = this.pokeapiService.getPokemon(+i);
       pokemonObsArr.push(pokeObs);
     }
 
-
-
     console.log(pokemonObsArr);
     forkJoin(pokemonObsArr).subscribe((res) => {
-      console.log(res);
+      // console.log(res);
       this.pokeresults = res;
       this.pokeRender = [...this.pokeresults];
     }, (err) => {
       console.log(err);
     });
-
-    const results: any = this.pokeresults.filter((pokemon) => {
-      const typeResults = [];
-      for (let i = 0; i < pokemon.types.length; i++) {
-        typeResults.push(pokemon.types[i].type.name);
-      }
-      console.log(typeResults);
-    });
-
-
   }
 
-  getType(event: any) {
-
-  }
-  onSearch(event: any) {
+  onFilter(filterItem: any) {
 
     const results = this.pokeresults.filter((pokemon) => {
       console.log(pokemon);
-      if (pokemon.name.includes(event.target.value.toLowerCase())) {
+      const pokeTypes = pokemon.types.map((x) => x.type.name);
+
+      if (pokemon.name.includes(filterItem.nameFilter.toLowerCase())
+      // &&pokeTypes.includes('dragon')
+      ) {
         return true;
       }
       return false;
     });
 
     this.pokeRender = [].concat(results);
+    console.log(this.pokeRender);
   }
-
-
-  // onFilterChange(event: any) {
-  //   const results = this.pokeresults.filter((pokemon) => {
-  //     if (pokemon.types.length === 2) {
-  //       if (pokemon.types[0].type.name.includes(event.target.value)
-  //       || pokemon.types[1].type.name.includes(event.target.value) ) {
-  //         return true;
-  //       }
-  //       return false;
-  //     }
-  //     this.pokeRender = [].concat(results);
-  //   });
-  // }
 }
 

@@ -1,8 +1,42 @@
-<div class="flex-grid">
+<div class="flex-grid" *ngIf="pokedetails">
         <div class="col1">
-                <h2>{{pokedetails.name}}</h2>
-                <img src="{{pokedetails.sprites.front_default}}" alt="Pokemon Image" class="image">
+                <div class="poke-title">{{pokedetails.name | titlecase }}</div>
+                <div class="images">
+                        <img src="{{pokedetails.sprites.front_default}}" alt="Pokemon Image" class="poke-image">
+                        <!-- <img src="{{pokedetails.sprites.back_default}}" alt="Pokemon Image" class="poke-image">
+                        <img src="{{pokedetails.sprites.front_shiny}}" alt="Pokemon Image" class="poke-image">
+                        <img src="{{pokedetails.sprites.back_shiny}}" alt="Pokemon Image" class="poke-image"> -->
+                </div>
+
+                <a *ngFor="let type of pokedetails.types">
+                        <!-- {{pokemon.types[i].type.name}} -->
+                        <label
+                                class="type-list__item type-list__item--{{type.type.name}}">{{type.type.name | titlecase}}</label>
+                </a>
+
         </div>
-        <div class="col2">This little piggy stayed home.</div>
-        <div class="col2">This little piggy had roast beef.</div>
+
+        <div class="col2">
+                <h2>Stats</h2>
+                <p>Attack: {{pokedetails.stats[4].base_stat }}</p>
+                <p>Defence: {{pokedetails.stats[3].base_stat }}</p>
+                <p>Speed: {{pokedetails.stats[0].base_stat }}</p>
+                <p>HP: {{pokedetails.stats[5].base_stat }}</p>
+                <p>Special Attack: {{pokedetails.stats[4].base_stat }}</p>
+                <p>Special Defence: {{pokedetails.stats[3].base_stat }}</p>
+                <p>Speed: {{pokedetails.stats[0].base_stat }}</p>
+                <p>HP: {{pokedetails.stats[5].base_stat }}</p>
+
+        </div>
+        <div class="col2">
+                <h2>Evolutions</h2>
+
+        </div>
+        <div class="col2">
+                <h2>Moves</h2>
+                <div class="moves-box">
+
+                </div>
+        </div>
+
 </div>
