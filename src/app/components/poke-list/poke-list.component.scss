@@ -1,3 +1,4 @@
+
 .title {
   padding-top: 15px;
   padding-bottom: 15px;
@@ -159,10 +160,11 @@ $filterColors: (
   border-width: 0px;
   color: #ffffff;
   padding: 5px 12px 5px 12px;
-  font-size: 11px;
+  font-size: 15px;
   margin-left: 5px;
   margin-right: 5px;
   background-color: #b41333;
+  border-radius: 25px;
 
   @each $key, $value in $filterColors {
     &--#{$key} {
@@ -194,3 +196,11 @@ $filterColors: (
   text-align: center;
   font-size: 30px;
 }
+
+// @media (max-width: 400px) {
+//   .col-1-4 {
+//     width: 25%;
+//     min-width: 120px;
+//     max-width: 20%;
+//   }
+// }

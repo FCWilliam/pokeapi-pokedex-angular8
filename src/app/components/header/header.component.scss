@@ -6,6 +6,10 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
+  outline-width: 0;
+  cursor: pointer;
+  outline-width: 0;
+
 }
 
 .form {
@@ -31,6 +35,8 @@
   background-size: cover;
   position: relative;
   padding-bottom: 75px;
+  cursor: pointer;
+  outline-width: 0;
 }
 
 
@@ -38,5 +44,6 @@
   font-size: 20px;
   text-align: center;
   color: #ffffff;
+  outline-width: 0;
 
 }

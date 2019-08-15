@@ -39,7 +39,7 @@ export class PokeDetailsComponent implements OnInit {
       // tslint:disable-next-line:prefer-for-of
       for (let i = 0; i < this.pokeSpecies.flavor_text_entries.length; i++) {
         if (this.pokeSpecies.flavor_text_entries[i].language.name.includes('en')
-        && this.pokeSpecies.flavor_text_entries[i].version.name.includes('firered')) {
+          && this.pokeSpecies.flavor_text_entries[i].version.name.includes('firered')) {
           // this.description = this.pokeSpecies.flavor_text_entries[i].flavor_text;
           console.log(this.pokeSpecies.flavor_text_entries[i].flavor_text);
           this.description = this.pokeSpecies.flavor_text_entries[i].flavor_text;
@@ -47,10 +47,7 @@ export class PokeDetailsComponent implements OnInit {
       }
 
 
-    }
-      , (err) => {
-        console.log(err);
-      });
-  }
+  });
+}
 }
 

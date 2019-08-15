@@ -3,16 +3,15 @@
                 <div class="poke-title">{{pokedetails.name | titlecase }}</div>
                 <div class="images">
                         <img src="{{pokedetails.sprites.front_default}}" alt="Pokemon Image" class="poke-image">
-                        <hr>
-                        <div class="all-images">
-                                <img src="{{pokedetails.sprites.front_default}}" alt="Pokemon Image"
-                                        class="small-image">
+                        <hr />
+                        <!-- <div class="all-images"> -->
+                                <img src="{{pokedetails.sprites.front_default}}" alt="Pokemon Image"class="small-image">
                                 <img src="{{pokedetails.sprites.back_default}}" alt="Pokemon Image" class="small-image">
                                 <img src="{{pokedetails.sprites.front_shiny}}" alt="Pokemon Image" class="small-image">
                                 <img src="{{pokedetails.sprites.back_shiny}}" alt="Pokemon Image" class="small-image">
 
-                        </div>
-                        <hr>
+                        <!-- </div> -->
+                        <hr />
                         <div class="description">
                                 <p>{{description}}</p>
                         </div>
@@ -34,7 +33,6 @@
                         <label
                                 class="type-list__item type-list__item--{{type.type.name}}">{{type.type.name | titlecase}}</label>
                 </a>
-                <button routerLink="/home">Button</button>
 
         </div>
         <div class="col2">
@@ -48,5 +46,4 @@
 
                 </div>
         </div>
-
 </div>
