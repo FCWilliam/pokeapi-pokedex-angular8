@@ -66,7 +66,6 @@ p{
   .images{
     flex-direction: row;
     text-align: center;
-    padding: 20px;
   }
 
   // .images{
@@ -150,4 +149,22 @@ p{
     margin-right: auto;
     background-color: #b41333;
     padding: 10px;
+  }
+
+  .all-images {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-transform: capitalize;
+    margin-left: auto; 
+    margin-right: auto; 
+    padding: 0px;
+  }
+
+  .small-image {
+    width: 25%;
+  }
+
+  .description{
+    margin-top: 20px;
   }

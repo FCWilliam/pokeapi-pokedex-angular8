@@ -31,7 +31,7 @@ export class PokeListComponent implements OnInit {
   ngOnInit() {
     this.filterForm.valueChanges.subscribe((filterItem) => {
       console.log(filterItem);
-      this.onFilter(filterItem)
+      this.onFilter(filterItem);
     });
 
     console.log(this.filterForm);

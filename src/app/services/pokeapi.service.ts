@@ -18,4 +18,8 @@ export class PokeapiService {
   public getPokemon(id: number): Observable<Pokemon> {
     return this.http.get(this.APIURL + 'pokemon/' + id);
   }
+
+  public getPokemonSpecies(id: number): Observable<Pokemon> {
+    return this.http.get(this.APIURL + 'pokemon-species/' + id);
+  }
 }

@@ -1,12 +1,12 @@
 <div class="flex-container">
 
-      <form [formGroup]="filterForm" (ngSubmit)="addPost(rForm.value)">
+  <form [formGroup]="filterForm" (ngSubmit)="addPost(rForm.value)">
 
-          <!-- <input class="search-box" (keyup)="onFilter($event)" placeholder="Search" align="middle"> -->
+    <!-- <input class="search-box" (keyup)="onFilter($event)" placeholder="Search" align="middle"> -->
 
-          <input class="search-box" formControlName="nameFilter" placeholder="Search" align="middle">
+    <input class="search-box" formControlName="nameFilter" placeholder="Search" align="middle">
 
-            <!-- <input type="checkbox" name="Bug" formControlName="typeFilter" value="1">
+    <!-- <input type="checkbox" name="Bug" formControlName="typeFilter" value="1">
             <input type="checkbox" name="Dragon" formControlName="typeFilter" value="1">
             <input type="checkbox" name="Ice" formControlName="typeFilter" value="1">
             <input type="checkbox" name="Fighting" formControlName="typeFilter" value="1">
@@ -22,26 +22,26 @@
             <input type="checkbox" name="Rock" formControlName="typeFilter" value="1">
             <input type="checkbox" name="Water" formControlName="typeFilter" value="1">
              -->
-          </form>
+  </form>
 
 
-    <div class="form">
-  
-    </div>
+  <div class="form">
+
+  </div>
 
   <div style="flex-grow: 9">
     <div class="grid grid-pad">
       <div class="col">
         <a *ngFor="let pokemon of pokeRender" class="col-1-4" routerLink="/details/{{pokemon.id}}">
           <div class="module hero">
-            <img src="{{pokemon.sprites.front_default}}" alt="Pokemon Image" class="row-image">
             <h4>{{pokemon.name  | titlecase}}</h4>
+            <img src="{{pokemon.sprites.front_default}}" alt="Pokemon Image" class="row-image">
             <div class="type-list">
-              <a *ngFor="let type of pokemon.types">
-                <!-- {{pokemon.types[i].type.name}} -->
-                <label class="type-list__item type-list__item--{{type.type.name}}">{{type.type.name}}</label>
-              </a>
-            </div>
+                <a *ngFor="let type of pokemon.types">
+                  <!-- {{pokemon.types[i].type.name}} -->
+                  <label class="type-list__item type-list__item--{{type.type.name}}">{{type.type.name}}</label>
+                </a>
+              </div>
           </div>
         </a>
       </div>

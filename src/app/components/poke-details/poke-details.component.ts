@@ -15,6 +15,8 @@ export class PokeDetailsComponent implements OnInit {
   public pokedetails = null;
   public pokeresults = [];
   public pokeRender = [];
+  public pokeSpecies = null;
+  public description = '';
 
 
   constructor(
@@ -28,10 +30,27 @@ export class PokeDetailsComponent implements OnInit {
     const pokedetails = this.pokeapiService.getPokemon(id).subscribe((res) => {
       console.log(res);
       this.pokedetails = res;
-    }, (err) => {
-      console.log(err);
     });
 
+    const pokeSpecies = this.pokeapiService.getPokemonSpecies(id).subscribe((res) => {
+      console.log(res);
+      this.pokeSpecies = res;
+
+      // tslint:disable-next-line:prefer-for-of
+      for (let i = 0; i < this.pokeSpecies.flavor_text_entries.length; i++) {
+        if (this.pokeSpecies.flavor_text_entries[i].language.name.includes('en')
+        && this.pokeSpecies.flavor_text_entries[i].version.name.includes('firered')) {
+          // this.description = this.pokeSpecies.flavor_text_entries[i].flavor_text;
+          console.log(this.pokeSpecies.flavor_text_entries[i].flavor_text);
+          this.description = this.pokeSpecies.flavor_text_entries[i].flavor_text;
+        }
+      }
+
+
+    }
+      , (err) => {
+        console.log(err);
+      });
   }
 }
 

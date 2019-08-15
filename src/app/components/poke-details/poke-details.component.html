@@ -3,16 +3,20 @@
                 <div class="poke-title">{{pokedetails.name | titlecase }}</div>
                 <div class="images">
                         <img src="{{pokedetails.sprites.front_default}}" alt="Pokemon Image" class="poke-image">
-                        <!-- <img src="{{pokedetails.sprites.back_default}}" alt="Pokemon Image" class="poke-image">
-                        <img src="{{pokedetails.sprites.front_shiny}}" alt="Pokemon Image" class="poke-image">
-                        <img src="{{pokedetails.sprites.back_shiny}}" alt="Pokemon Image" class="poke-image"> -->
-                </div>
+                        <hr>
+                        <div class="all-images">
+                                <img src="{{pokedetails.sprites.front_default}}" alt="Pokemon Image"
+                                        class="small-image">
+                                <img src="{{pokedetails.sprites.back_default}}" alt="Pokemon Image" class="small-image">
+                                <img src="{{pokedetails.sprites.front_shiny}}" alt="Pokemon Image" class="small-image">
+                                <img src="{{pokedetails.sprites.back_shiny}}" alt="Pokemon Image" class="small-image">
 
-                <a *ngFor="let type of pokedetails.types">
-                        <!-- {{pokemon.types[i].type.name}} -->
-                        <label
-                                class="type-list__item type-list__item--{{type.type.name}}">{{type.type.name | titlecase}}</label>
-                </a>
+                        </div>
+                        <hr>
+                        <div class="description">
+                                <p>{{description}}</p>
+                        </div>
+                </div>
 
         </div>
 
@@ -26,10 +30,16 @@
                 <p>Special Defence: {{pokedetails.stats[3].base_stat }}</p>
                 <p>Speed: {{pokedetails.stats[0].base_stat }}</p>
                 <p>HP: {{pokedetails.stats[5].base_stat }}</p>
+                <a *ngFor="let type of pokedetails.types">
+                        <label
+                                class="type-list__item type-list__item--{{type.type.name}}">{{type.type.name | titlecase}}</label>
+                </a>
+                <button routerLink="/home">Button</button>
 
         </div>
         <div class="col2">
-                <h2>Evolutions</h2>
+                <h2>Description</h2>
+
 
         </div>
         <div class="col2">
